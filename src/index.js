@@ -33,6 +33,8 @@ try {
   deploy.defaultTestClass = core.getInput('default_test_class');
   deploy.manifestToDeploy = core.getInput('manifest_path');
   deploy.sfdxRootFolder = core.getInput('sfdx_root_folder');
+  deploy.currentBranch = core.getInput('current_branch');
+  deploy.targetBranch = core.getInput('target_branch');
   deploy.destructivePath = core.getInput('destructive_path');
   deploy.dataFactory = core.getInput('data_factory');
   deploy.checkonly = (core.getInput('checkonly') === 'true' )? true : false;
