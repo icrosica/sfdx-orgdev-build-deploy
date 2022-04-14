@@ -62,6 +62,8 @@ let convertion = function(deploy){
     core.info("=== running GIT Delta ===");
     execCommand.run('sfdx', ['sgd:source:delta --to ' + deploy.currentBranch + ' --from ' + deploy.targetBranch + ' --output /opt/delta']);
     execCommand.run('mv -f /opt/delta/package/package.xml opt/ready2Deploy/');
+    core.info(deploy.currentBranch);
+    core.info(deploy.targetBranch);
 };
 
 let deploy = function (deploy, login){
