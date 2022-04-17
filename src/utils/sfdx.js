@@ -56,7 +56,7 @@ let convertion = function(deploy){
     core.info("=== creating dir ===");
     execCommand.run('mkdir', ['/opt/ready2Deploy']);
     core.info("=== run source convert ===");
-    execCommand.run('sfdx', ['force:source:convert, -d, /opt/ready2Deploy'])
+    execCommand.run('sfdx', ['force:source:convert', '-d', '/opt/ready2Deploy']);
     core.info("=== converted ===");
 };
 
